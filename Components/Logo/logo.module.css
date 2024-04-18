@@ -1,0 +1,47 @@
+.logo {
+    display: flex;
+    flex-direction: row;
+}
+
+/* .logoImg{
+    max-width: 60px;
+    max-height: 60px;
+} */
+
+.logoInfo {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    align-items: center;
+}
+
+.logoTitle {
+    color: rgb(0, 0, 0);
+    text-shadow:  5px 5px 5px rgba(0, 0, 0, 0.5);
+    font-size: 2em;
+    font-style: normal;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.logoTitleText {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+}
+
+@media screen and (max-width: 550px) {
+    .logoInfo {
+        width: 240px;
+    }
+    .logoTitle {
+        font-size: 20px;
+    }
+    .logoTitleText {
+        font-size: 12px;
+    }
+    .logoImg{
+        max-width: 30px;
+        max-height: 30px;
+    }
+}

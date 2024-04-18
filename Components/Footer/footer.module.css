@@ -1,0 +1,73 @@
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.footer > info > ul > li > a, .footer > info > nav > ul > li > a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    padding-right: 10%;
+    /* text-wrap: nowrap; */
+    padding: 10px;
+}
+
+.footer > .info > ul > li > a:hover, .footer > .info > nav > ul > li > a:hover  {
+    color:  #eb8fa8;
+}
+
+.logoImg {
+    width: 150px;
+    height: 150px;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    text-transform: uppercase;
+}
+
+.whatsapp::before, .telegram::before, .instagram::before, .phone::before {
+    padding-right: 10px;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content:"";
+}
+
+.whatsapp::before {
+    background-image: url("https://cdns.iconmonstr.com/wp-content/releases/preview/2016/240/iconmonstr-whatsapp-4.png");
+}
+
+.telegram::before {
+    background-image: url("https://cdns.iconmonstr.com/wp-content/releases/preview/2018/240/iconmonstr-telegram-4.png");
+}
+
+.instagram::before {
+    background-image: url("https://cdns.iconmonstr.com/wp-content/releases/preview/2016/240/iconmonstr-instagram-14.png");
+}
+
+.phone::before { 
+    background-image: url("https://cdns.iconmonstr.com/wp-content/releases/preview/2012/240/iconmonstr-smartphone-4.png");
+}
+
+.info > ul {
+    list-style: none;
+}
+
+.menu {
+    list-style: none;
+}
+
+.instagramBan {
+    font-size: smaller;
+    text-transform: none;
+}
