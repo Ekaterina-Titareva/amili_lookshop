@@ -1,9 +1,10 @@
+'use client'
 import React, { useState } from 'react';
 import styles from './allGoods.module.scss'
-import {goods} from '../../assets/data/data.js'
-import ItemOfGoogs from '../ItemOfGoods/ItemOfGoods.jsx';
-import { NavLink } from "react-router-dom";
-import MinProductCard from '../MinProductCard/MinProductCard.jsx';
+import {goods} from '../../public/assets/data/data.js'
+import ItemOfGoogs from '../../Components/ItemOfGoods/ItemOfGoods.jsx';
+import Link from "next/link";
+import MinProductCard from '../../Components/MinProductCard/MinProductCard.jsx';
 
 function AllGoods() {
     const [clickedItem, setClickedItem] = useState([]);
@@ -50,7 +51,7 @@ function AllGoods() {
                     </>
                     :
                     goods.map((item) => (
-                        <NavLink to={`${item.id}`} key={item.id}>
+                        <Link href={`${item.id}`} key={item.id}>
                             <MinProductCard
                                 key={item.id} 
                                 id={item.id} 
@@ -60,7 +61,7 @@ function AllGoods() {
                                 price={item.price} 
                                 handleItemClick={handleItemClick}
                             />
-                        </NavLink>
+                        </Link>
                         ))
                 }
             </div>

@@ -1,7 +1,7 @@
 import Navigation from "../Navigation/Navigation"
-import styles from '../Footer/footer.module.css'
+import styles from '../Footer/footer.module.scss'
 import Logo from '../Logo/Logo.jsx'
-import { navLinks } from '../../public/assets/data/navLinks'
+import { navLinks } from '../../public/assets/data/data.js'
 
 function Footer() {
     return (

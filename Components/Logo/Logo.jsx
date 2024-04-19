@@ -1,4 +1,4 @@
-import styles from '../Logo/logo.module.css'
+import styles from '../Logo/logo.module.scss'
 import logoImg from '../../public/assets/icons/flower.svg'
 import Image from 'next/image';
 

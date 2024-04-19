@@ -1,6 +1,8 @@
 import React from 'react';
-import size from '../../assets/images/size.jpg'
+import size from '../../public/assets/images/size.jpg'
 import styles from '../Questions/questions.module.scss'
+import Image from 'next/image';
+import {rows} from '../../public/assets/data/data.js'
 
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
@@ -15,18 +17,6 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
-function createData(size, size34, size36, size38, size40, size42, size44, size46, size48, size50, size52) {
-    return {size, size34, size36, size38, size40, size42, size44, size46, size48, size50, size52};
-}
-const rows = [
-    createData('Обхват груди, см', 80, 84, 88, 92, 96, 100, 104, 110, 116, 122),
-    createData('Обхват талии, см', 62,	66,	70,	74,	78,	82,	86,	92,	98,	104),
-    createData('Обхват бедер, см', 86, 90,	94,	98,	102, 106, 110, 116, 122, 128),
-    createData('Длина рукава, см', 59, 59, 60, 60, 61, 61, 61, 61, 62, 92),
-    createData('Охват верхней части руки, см', 26, 27, 28, 29, 30, 31, 32, 34, 36, 38),
-    createData('Ширина спины, см', 33.5, 34.5, 35.5, 36.5, 37.5, 38.5, 39.5, 41, 42.5, 44),
-];
-
 function Questions() {
     return (
         <section>
@@ -37,7 +27,7 @@ function Questions() {
                 aria-controls="panel1-content"
                 id="panel1-header"
             > 
-                <h3>Как ухаживать за изделиями?</h3>
+                <h3  className={styles.text}>Как ухаживать за изделиями?</h3>
             </AccordionSummary>
             <AccordionDetails>
             <p>Внимательно читайте состав и требования к уходу на бирках. Изделия ручной работы требуют бережного ухода!</p>
@@ -52,12 +42,12 @@ function Questions() {
                 aria-controls="panel2-content"
                 id="panel2-header"
             >
-                <h3>Как правильно снимать мерки?</h3>
+                <h3  className={styles.text}>Как правильно снимать мерки?</h3>
             </AccordionSummary>
             <AccordionDetails>
                 <div className={styles.containerWrapper}>
                     <div className={styles.imageWrapper}>
-                        <img className={styles.image} src={size} alt="size" />
+                        <Image width={500} height={500} className={styles.image} src={size} alt="size" />
                     </div>
                     <div className={styles.textWrapper}>
                         <p>Для начала измерьте себя.</p>
@@ -77,7 +67,7 @@ function Questions() {
                 aria-controls="panel1-content"
                 id="panel1-header"
             > 
-                <h3>Как правильно выбрать свой размер?</h3>
+                <h3  className={styles.text}>Как правильно выбрать свой размер?</h3>
             </AccordionSummary>
             <AccordionDetails>
                 <p>Мы знаем, что выбрать размер без примерки бывает сложно. Поэтому сначала определите свой размер, по размерной сетке:</p>
@@ -133,7 +123,7 @@ function Questions() {
                 aria-controls="panel1-content"
                 id="panel1-header"
             > 
-                <h3>Как сделать предзаказ?</h3>
+                <h3  className={styles.text}>Как сделать предзаказ?</h3>
             </AccordionSummary>
             <AccordionDetails>
             <p>Предзаказ — это возможность забронировать понравившуюся модель в три простых шага:</p>
@@ -150,7 +140,7 @@ function Questions() {
                 aria-controls="panel1-content"
                 id="panel1-header"
             > 
-                <h3>Как получить заказ?</h3>
+                <h3  className={styles.text}>Как получить заказ?</h3>
             </AccordionSummary>
             <AccordionDetails>
             <p>После оплаты предзаказа, мы приступаем к пошиву и когда модель будет готова, отправим вам посылку по указанному адресу. Доставка по всей России. Если сроки пошива изменятся, мы Вам сообщим по Вашему номеру телефону.</p>
@@ -163,7 +153,7 @@ function Questions() {
                 aria-controls="panel1-content"
                 id="panel1-header"
             > 
-                <h3>Услуги портного</h3>
+                <h3  className={styles.text}>Услуги портного</h3>
             </AccordionSummary>
             <AccordionDetails>
             <p>Вы можете воспользоваться услугами профессионального портного.</p>
@@ -178,7 +168,7 @@ function Questions() {
                 aria-controls="panel1-content"
                 id="panel1-header"
             > 
-                <h3>Остались вопросы?</h3>
+                <h3  className={styles.text}>Остались вопросы?</h3>
             </AccordionSummary>
             <AccordionDetails>
                 <p>Если не нашли ответа на ваш вопрос, свяжитесь с нами по контактам ниже:</p>

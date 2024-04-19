@@ -14,14 +14,14 @@ function ItemOfGoogs({id, category, name, image1, image2, image3, description, t
                 <div className={styles.images}>
                     <div  className={styles.imagesWrapper}>
                         <div className={styles.imageWrapper}>
-                            <Image width={100} height={100} className={styles.image} src={image2} alt={name}/>
+                            <Image width={1000} height={1000} className={styles.image} src={image2} alt={name}/>
                         </div>
                         <div className={styles.imageWrapper}>
-                            <Image width={100} height={100} className={styles.image} src={image3} alt={name}/>
+                            <Image width={1000} height={1000} className={styles.image} src={image3} alt={name}/>
                         </div>
                     </div>
                     <div className={styles.imageMainWrapper}>
-                        <Image width={100} height={100} className={styles.imageMain} src={image1} alt={name}/>
+                        <Image width={1000} height={1000} className={styles.imageMain} src={image1} alt={name}/>
                     </div>
                 </div>
                 <div className={styles.infoWrapper}>

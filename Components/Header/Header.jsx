@@ -3,7 +3,7 @@ import React, { useState} from 'react'
 import Menu from '../Menu/Menu.jsx'
 import Logo from '../Logo/Logo.jsx'
 import styles from '../Header/header.module.scss'
-import { navLinks } from '../../public/assets/data/navLinks.js'
+import { navLinks } from '../../public/assets/data/data.js'
 
 
 function Header() {
