@@ -444,55 +444,55 @@ export const goods = [
 
 export const categories = [
     {
-        id: "1",
+        id: "dress",
         name: "Платья",
         image1: "/assets/images/categories/id1I1.jpg",
         image2: "/assets/images/categories/id1I2.jpg"
     },
     {
-        id: "2",
+        id: "cardigan",
         name: "Кардиганы",
         image1: "/assets/images/categories/id2I1.jpg",
         image2: "/assets/images/categories/id2I2.jpg"
     },
     {
-        id: "3",
+        id: "set",
         name: "Комплекты",
         image1: "/assets/images/categories/id3I1.jpg",
         image2: "/assets/images/categories/id3I2.jpg"
     },
     {
-        id: "4",
+        id: "shirt",
         name: "Рубашки",
         image1: "/assets/images/categories/id4I1.jpg",
         image2: "/assets/images/categories/id4I2.jpg"
     },
     {
-        id: "5",
+        id: "scirt",
         name: "Юбки",
         image1: "/assets/images/categories/id5I1.jpg",
         image2: "/assets/images/categories/id5I2.jpg"
     },
     {
-        id: "6",
+        id: "jacket",
         name: "Жакеты",
         image1: "/assets/images/categories/id6I1.jpg",
         image2: "/assets/images/categories/id6I2.jpg"
     },
     {
-        id: "7",
+        id: "underwear",
         name: "Белье",
         image1: "/assets/images/categories/id7I1.jpg",
         image2: "/assets/images/categories/id7I2.jpg"
     },
     {
-        id: "8",
+        id: "corsage",
         name: "Корсажи",
         image1: "/assets/images/categories/id8I1.jpg",
         image2: "/assets/images/categories/id8I2.jpg"
     },
     {
-        id: "9",
+        id: "gift",
         name: "Подарки",
         image1: "/assets/images/categories/id9I1.jpg",
         image2: "/assets/images/categories/id9I2.jpg"

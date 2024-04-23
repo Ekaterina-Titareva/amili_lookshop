@@ -3,19 +3,18 @@ import React, { useState} from 'react'
 import styles from "./page.module.css";
 import Categories from '../Components/Categories/Categories.jsx';
 import Link from 'next/link';
-import {categories, goods} from '../public/assets/data/data.js'
 
-// export const getStaticProps = async() => {
-//   const res = await fetch('http://localhost:5000/goods');
-//   const data = res.json()
-//   console.log(data);
-//   return {
-//       props: { goods: data}
-//   } 
-// }
+export const getStaticProps = async() => {
+  const res = await fetch('http://localhost:5000/categories');
+  const data = res.json()
+  console.log(data);
+  return {
+      props: { categories: data}
+  } 
+}
 
+export default function CategoriesPage(props) {
 
-export default function Home() {
   const [clickedCategory, setClickedCategory] = useState([]);
 
   const [isClicked, setIsClicked] = useState([]);
@@ -39,8 +38,8 @@ return (
   <h2 className={styles.goodsTitle}>Наши товары</h2>
     <article className={styles.categories}>
       {
-      categories?.length &&
-        categories.map((category) => ( 
+      props.categories?.length &&
+      props.categories.map((category) => ( 
           <Link href={`/categories/${category.id}` } key={category.id}>
             < Categories
               id={category.id} 
