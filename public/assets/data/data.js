@@ -515,6 +515,7 @@ export const rows = [
 export const navLinks = [
     {id: "home_link", value: "Главная", href: "/"},
     {id: "about_link", value: "О нас", href: "/about"},
+    {id: "categories_link", value: "Категории", href: "/categories"},
     {id: "goods_link", value: "Все товары", href: "/allGoods"},
     {id: "questions_link", value: "Частые вопросы", href: "/questions"},
     {id: "private_link", value: "Политика конфиденциальности", href: "/privacyPolicy"}

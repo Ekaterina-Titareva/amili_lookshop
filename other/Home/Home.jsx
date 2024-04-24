@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Categories from '../Categories/Categories.jsx';
+import Categories from '../Category/Category.jsx';
 import ItemsOfCategory from '../ItemsOfCategory/ItemsOfCategory.jsx';
 import ItemOfGoogs from '../ItemOfGoods/ItemOfGoods.jsx';
 import styles from './home.module.scss'

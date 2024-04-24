@@ -1,0 +1,60 @@
+.categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+    gap: 20px;
+}
+
+.goods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-items: center;
+    gap: 20px;
+}
+
+.allGoodsLink {
+    display: block;
+    padding: 5px;
+    margin: 30px 35%;
+    text-align: center;
+    border: 1px solid black;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 1440px) {
+    .categories {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+}
+
+.card {
+    position: relative;
+    width: 200px;
+    height: 300px;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nameWrapper{
+    position: absolute;
+    top:75%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+.name {
+    padding: 0;
+    margin: 0;
+    font-size: 22px;
+    filter: drop-shadow(4px 2px 2px rgb(0, 0, 0));
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}

@@ -1,9 +1,9 @@
 'use client'
 import React, { useState } from 'react';
-import styles from './categories.module.scss'
+import styles from './category.module.scss'
 
-function Categories(props) {
-    const {name, image1, image2} = props
+function Category(props) {
+    const {name, image1, image2, handleCategoryClick} = props
     const handleMouseOver = (e) => {
         e.target.src = image2;
 };
@@ -13,7 +13,7 @@ function Categories(props) {
 
     return (
         <>
-            <div className={styles.card} > 
+            <div className={styles.card} onClick={handleCategoryClick}> 
                 <div className={styles.imageWrapper}>
                     <img className={styles.image}
                     src={image1} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}
@@ -28,5 +28,5 @@ function Categories(props) {
         )
     }
 
-export default Categories;
+export default Category;
 
