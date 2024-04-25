@@ -12,9 +12,26 @@ export default function Categories(props) {
       const data = await res.json();
       setData(data);
     };
-
     fetchData();
   }, []);
+  const [goods, setGoods] = useState(null);
+  useEffect(() => {
+      const fetchData = async () => {
+          const res = await fetch('http://localhost:5000/goods');
+          const responseGoods = await res.json();
+          setGoods(responseGoods);
+      };
+      fetchData();
+  }, []);
+
+const [clickedCategory, setClickedCategory] = useState([]);
+const handleCategoryClick = (e) => {
+    console.log(e)
+    const selectedCategory = e.target.alt;
+    const filteredItems = goods.filter(item => item.category == selectedCategory);
+    setClickedCategory(filteredItems);
+}
+
 
 const handleMouseOver = (e) => {
   e.target.src = `${e.target.src.slice(0, -5) + 2 + e.target.src.slice(-4)}`;
@@ -25,6 +42,7 @@ const handleMouseOver = (e) => {
     e.target.src = `${e.target.src.slice(0, -5) + 1 + e.target.src.slice(-4)}`;
 };
 
+
 return (
   <>
   <section id="categories" className={styles.container}>
@@ -32,8 +50,8 @@ return (
     <article className={styles.categories}>
       { data?.length &&
       data.map((category) => ( 
-          <Link href={`/categories/${category.id}` } key={category.id}>
-            <div className={styles.card}> 
+          <Link href={`/categories/${category.id}`} key={category.id} title={category.id} >
+            <div className={styles.card} onClick={handleCategoryClick}> 
                 <div className={styles.imageWrapper}>
                     <img className={styles.image}
                     src={category.image1} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}
@@ -53,3 +71,4 @@ return (
 </>
 );
 }
+
