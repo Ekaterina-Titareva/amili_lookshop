@@ -1,11 +1,12 @@
 'use client'
-import { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './Category.module.scss'
 import Link from 'next/link';
+import AllGoodsLink from '@/Components/AllGoodsLink/AllGoodsLink';
 
 export default function Category (props) {
-
     const [data, setData] = useState(null);
+    const [clickedCategory, setClickedCategory] = useState([]);
     useEffect(() => {
         const fetchData = async () => {
             const res = await fetch('http://localhost:5000/goods');
@@ -14,14 +15,23 @@ export default function Category (props) {
         };
         fetchData();
     }, []);
-    console.log(props)
+    useEffect(() => {
+        const handleCategory = () => {
+            if (data) {
+                const filteredItems = data.filter(item => item.categoryEng === props.params.categoryId);
+                setClickedCategory(filteredItems);
+            }
+        };
+        handleCategory();
+    }, [data, props.params.categoryId]);
+
     return (
         <>
         <section id="item" className={styles.container}>
             <h2 className={styles.goodsTitle}>Наши товары</h2>
             <article className={styles.categories}>
-                {data?.length &&
-                    data.map((item) => (
+                {clickedCategory?.length &&
+                    clickedCategory.map((item) => (
                     <Link href={`/categories/${props.params.categoryId}/${item.id}`} key={item.id}>
                         <div key={item.id} className={styles.card}>
                             <div className={styles.imageWrapper} >
@@ -34,7 +44,7 @@ export default function Category (props) {
                     ))
                 }
             </article>
-            <a className={styles.allGoodsLink}href="/allGoods">Посмотреть все товары</a>
+            <AllGoodsLink />
         </section>  
         </>
     );

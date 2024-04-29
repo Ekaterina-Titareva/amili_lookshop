@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import styles from './allGoods.module.scss'
 import Link from "next/link";
 
-function AllGoods() {
+function AllGoods(props) {
     const [data, setData] = useState(null);
     useEffect(() => {
         const fetchData = async () => {

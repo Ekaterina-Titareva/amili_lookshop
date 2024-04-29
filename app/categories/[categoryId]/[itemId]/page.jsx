@@ -1,10 +1,12 @@
 'use client'
 import { useEffect, useState } from 'react';
 import styles from './Item.module.scss'
-import Link from 'next/link';
+import AllGoodsLink from '@/Components/AllGoodsLink/AllGoodsLink';
+// import Link from 'next/link';
 
 export default function Item (props) {
-    const [data, setData] = useState(null);
+    const [goods, setData] = useState(null);
+    const [clickedItem, setClickedItem] = useState([]);
     useEffect(() => {
         const fetchData = async () => {
             const res = await fetch('http://localhost:5000/goods');
@@ -13,14 +15,21 @@ export default function Item (props) {
         };
         fetchData();
     }, []);
-
-
+    useEffect(() => {
+        const handleItem = () => {
+            if (goods) {
+                const filteredItems = goods.filter(item => item.id === props.params.itemId);
+                setClickedItem(filteredItems);
+            }
+        };
+        handleItem();
+    }, [goods, props.params.itemId]);
     return (
         <>
         <section id="category" className={styles.container}>
             <h2 className={styles.goodsTitle}>Наши товары</h2>
-            {data?.length &&
-                data.map((item) => (
+            {clickedItem?.length &&
+                clickedItem.map((item) => (
                     <div key={item.id} className={styles.card}>
                     {/* <img className={selectedImage === image1 ? `${styles.image} ${styles.selected}` : styles.image} src={image1} alt={name} onClick={() => handleImageClick(image1)} />
                     <img className={selectedImage === image2 ? `${styles.image} ${styles.selected}` : styles.image} src={image2} alt={name} onClick={() => handleImageClick(image2)} />
@@ -52,7 +61,7 @@ export default function Item (props) {
                 </div>
                 ))
             }
-            <a className={styles.allGoodsLink}href="/allGoods">Посмотреть все товары</a>
+            <AllGoodsLink />
         </section>  
         </>
     );
