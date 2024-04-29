@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react';
-import styles from './Category.module.scss'
+import styles from './Item.module.scss'
 
 export default function Item (props) {
     const [data, setData] = useState(null);

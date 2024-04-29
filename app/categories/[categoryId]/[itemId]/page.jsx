@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react';
-import styles from './Category.module.scss'
+import styles from './Item.module.scss'
 import Link from 'next/link';
 
 export default function Item (props) {
@@ -10,11 +10,11 @@ export default function Item (props) {
             const res = await fetch('http://localhost:5000/goods');
             const responseData = await res.json();
             setData(responseData);
-
         };
         fetchData();
     }, []);
-            console.log(props.params.id)    
+
+
     return (
         <>
         <section id="category" className={styles.container}>
@@ -22,7 +22,6 @@ export default function Item (props) {
             {data?.length &&
                 data.map((item) => (
                     <div key={item.id} className={styles.card}>
-                
                     {/* <img className={selectedImage === image1 ? `${styles.image} ${styles.selected}` : styles.image} src={image1} alt={name} onClick={() => handleImageClick(image1)} />
                     <img className={selectedImage === image2 ? `${styles.image} ${styles.selected}` : styles.image} src={image2} alt={name} onClick={() => handleImageClick(image2)} />
                     <img className={selectedImage === image3 ? `${styles.image} ${styles.selected}` : styles.image} src={image3} alt={name} onClick={() => handleImageClick(image3)} /> */}
