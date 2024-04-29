@@ -14,7 +14,7 @@ function AllGoods(props) {
         fetchData();
     }, []);
     return (
-        <section id="allGoods" className={styles.container}>
+        <section className={styles.container}>
             <h2 className={styles.title}>все товары</h2>
             <div className={styles.wrapper}>
                 { data?.length &&

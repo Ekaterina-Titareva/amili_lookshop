@@ -3,7 +3,7 @@ import styles from './privacyPolicy.module.scss'
 function  PrivacyPolicy() {
 
     return (
-        <section id="privacyPolicy" className={styles.container}>
+        <section className={styles.container}>
         <h2 className={styles.title}>политика конфиденциальности</h2>
         <div className={styles.textWrapper}>
             <p className={styles.text}>Мы, Amili_lookshop, ценим Вашу конфиденциальность и стремимся обеспечить безопасность Ваших данных. Данный сайт является сайтом-визиткой и не собирает персональные данные посетителей, за исключением информации, которую Вы добровольно предоставляете в сообщениях в социальных сетях, по электронной почте или других мессенджерах.</p>

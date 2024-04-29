@@ -5,7 +5,7 @@ import Image from 'next/image';
 function About() {
 
     return (
-        <section id="about" className={styles.container}>
+        <section className={styles.container}>
         <h2 className={styles.title}>о нас</h2>
         <div className={styles.media}>
             <Image width={1000} height={1000} className={styles.image} src={aboutImg} alt="Гульназ" />

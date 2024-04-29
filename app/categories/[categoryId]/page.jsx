@@ -27,7 +27,7 @@ export default function Category (props) {
 
     return (
         <>
-        <section id="item" className={styles.container}>
+        <section className={styles.container}>
             <h2 className={styles.goodsTitle}>Наши товары</h2>
             <article className={styles.categories}>
                 {clickedCategory?.length &&

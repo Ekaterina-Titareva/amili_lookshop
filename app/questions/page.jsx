@@ -34,8 +34,6 @@ function Questions() {
             </AccordionDetails>
         </Accordion>
 
-
-
         <Accordion>
             <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
