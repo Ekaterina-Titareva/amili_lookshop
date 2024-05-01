@@ -1,19 +1,9 @@
 'use client'
-import { useEffect, useState } from 'react';
 import styles from './allGoods.module.scss'
 import Link from "next/link";
 import { goods as data}  from '@/public/assets/data/data';
 
 function AllGoods(props) {
-    // const [data, setData] = useState(null);
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //         const res = await fetch('http://localhost:5000/goods');
-    //         const responseData = await res.json();
-    //         setData(responseData);
-    //     };
-    //     fetchData();
-    // }, []);
     return (
         <section className={styles.container}>
             <h2 className={styles.title}>все товары</h2>

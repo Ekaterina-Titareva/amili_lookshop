@@ -6,16 +6,7 @@ import Item from '@/Components/Item/Item';
 import { goods }  from '@/public/assets/data/data';
 
 export default function ItemOfGoods (props) {
-    // const [goods, setData] = useState(null);
     const [clickedItem, setClickedItem] = useState([]);
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //         const res = await fetch('http://localhost:5000/goods');
-    //         const responseData = await res.json();
-    //         setData(responseData);
-    //     };
-    //     fetchData();
-    // }, []);
     useEffect(() => {
         const handleItem = () => {
             if (goods) {
@@ -24,7 +15,7 @@ export default function ItemOfGoods (props) {
             }
         };
         handleItem();
-    }, [goods, props.params.itemId]);
+    }, [props.params.itemId]);
     return (
         <>
         <section>

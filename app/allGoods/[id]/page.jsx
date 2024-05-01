@@ -5,16 +5,7 @@ import AllGoodsLink from '@/Components/AllGoodsLink/AllGoodsLink';
 import { goods as goodsData}  from '@/public/assets/data/data';
 
 export default function ItemOfAllGoods (props) {
-    // const [goodsData, setData] = useState(null);
     const [clickedItemOfGoods, setClickedItemOfGoods] = useState([]);
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //         const res = await fetch('http://localhost:5000/goods');
-    //         const responseData = await res.json();
-    //         setData(responseData);
-    //     };
-    //     fetchData();
-    // }, []);
     useEffect(() => {
         const handleItem = () => {
             if (goodsData) {
@@ -23,7 +14,7 @@ export default function ItemOfAllGoods (props) {
             }
         };
         handleItem();
-    }, [goodsData, props.params.id]);  
+    }, [props.params.id]);  
     return (
         <>
         <section>

@@ -3,19 +3,10 @@ import React, { useState, useEffect } from 'react';
 import styles from './Category.module.scss'
 import Link from 'next/link';
 import AllGoodsLink from '@/Components/AllGoodsLink/AllGoodsLink';
-import { goods as data}  from '@/public/assets/data/data';
+import {goods as data}  from '@/public/assets/data/data';
 
 export default function Category (props) {
-    // const [data, setData] = useState(null);
     const [clickedCategory, setClickedCategory] = useState([]);
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //         const res = await fetch('http://localhost:5000/goods');
-    //         const responseData = await res.json();
-    //         setData(responseData);
-    //     };
-    //     fetchData();
-    // }, []);
     useEffect(() => {
         const handleCategory = () => {
             if (data) {
@@ -24,7 +15,7 @@ export default function Category (props) {
             }
         };
         handleCategory();
-    }, [data, props.params.categoryId]);
+    }, [props.params.categoryId]);
 
     return (
         <>
