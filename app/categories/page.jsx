@@ -3,17 +3,18 @@ import { useEffect, useState } from 'react';
 import styles from "./Categories.module.scss";
 import Link from 'next/link';
 import AllGoodsLink from '@/Components/AllGoodsLink/AllGoodsLink';
+import { categories } from '@/public/assets/data/data';
 
 export default function Categories(props) {
-  const [categories, setData] = useState(null);
-  useEffect(() => {
-    const fetchData = async () => {
-      const res = await fetch('http://localhost:5000/categories');
-      const data = await res.json();
-      setData(data);
-    };
-    fetchData();
-  }, []);
+  // const [categories, setData] = useState(null);
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const res = await fetch('http://localhost:5000/categories');
+  //     const data = await res.json();
+  //     setData(data);
+  //   };
+  //   fetchData();
+  // }, []);
     const handleMouseOver = (e) => {
       e.target.src = `${e.target.src.slice(0, -5) + 2 + e.target.src.slice(-4)}`;
     }

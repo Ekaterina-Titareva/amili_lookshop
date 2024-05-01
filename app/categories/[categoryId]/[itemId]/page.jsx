@@ -3,18 +3,19 @@ import { useEffect, useState } from 'react';
 import AllGoodsLink from '@/Components/AllGoodsLink/AllGoodsLink';
 import Item from '@/Components/Item/Item';
 // import Link from 'next/link';
+import { goods }  from '@/public/assets/data/data';
 
 export default function ItemOfGoods (props) {
-    const [goods, setData] = useState(null);
+    // const [goods, setData] = useState(null);
     const [clickedItem, setClickedItem] = useState([]);
-    useEffect(() => {
-        const fetchData = async () => {
-            const res = await fetch('http://localhost:5000/goods');
-            const responseData = await res.json();
-            setData(responseData);
-        };
-        fetchData();
-    }, []);
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         const res = await fetch('http://localhost:5000/goods');
+    //         const responseData = await res.json();
+    //         setData(responseData);
+    //     };
+    //     fetchData();
+    // }, []);
     useEffect(() => {
         const handleItem = () => {
             if (goods) {
