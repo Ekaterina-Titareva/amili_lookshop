@@ -6,7 +6,8 @@
 .wrapper {
     margin: 0 100px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    justify-items: center;
     gap: 40px;
 }
 
@@ -21,10 +22,10 @@
     object-fit: cover;
 }
 
-.selected {
-    width: 200px;
-    height: 400px;
-}
+// .selected {
+//     width: 200px;
+//     height: 400px;
+// }
 
 .name, .price {
     max-width: 250px;
@@ -34,4 +35,10 @@
 
 .price {
     font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        margin: 0;
+    }
 }

@@ -1,12 +1,8 @@
 .logo {
     display: flex;
     flex-direction: row;
+    justify-self: center;
 }
-
-/* .logoImg{
-    max-width: 60px;
-    max-height: 60px;
-} */
 
 .logoInfo {
     display: flex;
@@ -41,7 +37,6 @@
         font-size: 12px;
     }
     .logoImg{
-        max-width: 30px;
-        max-height: 30px;
+        display: none;
     }
 }

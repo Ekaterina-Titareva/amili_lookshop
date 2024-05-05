@@ -1,4 +1,5 @@
 import styles from "./item.module.scss"
+import Image from "next/image"
 
 const Item = (props) => {
     return (
@@ -9,14 +10,14 @@ const Item = (props) => {
             <div className={styles.images}>
                 <div  className={styles.imagesWrapper}>
                     <div className={styles.imageWrapper}>
-                        <img className={styles.image} src={props.image2} alt={props.name}/>
+                        <Image height={2000} width={1000} className={styles.image} src={props.image2} alt={props.name}/>
                     </div>
                     <div className={styles.imageWrapper}>
-                        <img className={styles.image} src={props.image3} alt={props.name}/>
+                        <Image height={2000} width={1000} className={styles.image} src={props.image3} alt={props.name}/>
                     </div>
                 </div>
                 <div className={styles.imageMainWrapper}>
-                    <img className={styles.imageMain} src={props.image1} alt={props.name}/>
+                    <Image height={2000} width={1000} className={styles.imageMain} src={props.image1} alt={props.name}/>
                 </div>
             </div>
             <div className={styles.infoWrapper}>

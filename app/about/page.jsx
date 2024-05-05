@@ -1,3 +1,4 @@
+'use client'
 import styles from './about.module.scss'
 import aboutImg from '../../public/assets/images/about.jpg'
 import Image from 'next/image';
@@ -8,7 +9,7 @@ function About() {
         <section className={styles.container}>
         <h2 className={styles.title}>о нас</h2>
         <div className={styles.media}>
-            <Image width={1000} height={1000} className={styles.image} src={aboutImg} alt="Гульназ" />
+            <Image height={2000} width={1000} className={styles.image} src={aboutImg} alt="Гульназ" />
             <div>
                 <p className={styles.text}>Добро пожаловать на официальный сайт Amili_lookshop, бренда, который возник благодаря страсти и преданности делу обычного офисного работника, ставшего предпринимателем. Наша история — это история трансформации, поскольку мы стремимся приносить счастье и радость женщинам через нашу одежду ручной работы.</p>
                 <p className={styles.text}>Все началось три года назад, когда я, будучи обычным офисным сотрудником, почувствовала глубокое желание изменить жизнь окружающих меня женщин. Вдохновленная красотой натуральных тканей и искусством пошива, я отправилась в путь по созданию собственного небольшого ателье.</p>

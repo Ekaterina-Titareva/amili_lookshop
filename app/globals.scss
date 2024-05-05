@@ -34,6 +34,7 @@ h2 {
   text-transform: uppercase;
   text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.748);
   font-size: 24px;
+  min-width: 95px;
   line-height: 120%;
   transition: all 0.5s ease; 
   padding: 10px;
@@ -42,23 +43,28 @@ h2 {
 
 @media screen and (max-width: 1440px) {
   h2 {
-      margin-top: 8%;
+      margin-top: 100px;
   }
 }
 
 @media screen and (max-width: 1024px) {
   h2 {
-      margin-top: 10%;
+      margin-top: 85px;
   }
 }
 
 @media screen and (max-width: 768px) {
   h2 {
-      margin-top: 20%;
+      margin-top: 75px;
+      
   }
 
 }
 
-/* 
-@media screen and (max-width: 425px) {
-} */
+
+// @media screen and (max-width: 425px) {
+//   h2 {
+//     margin-top: 75px;
+    
+// }
+// }

@@ -1,9 +1,8 @@
 
 .footer {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: auto 1fr 2fr;
     align-items: center;
-    justify-content: space-around;
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.862);
 }
@@ -17,8 +16,14 @@
     padding: 10px;
 }
 
-.footer > .info > ul > li > a:hover, .footer > .info > nav > ul > li > a:hover  {
+.footer > .info > li > a:hover, .footer > .info > nav > ul > li > a:hover  {
     color:  #eb8fa8;
+}
+
+.footer > .info > li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .logoImg {
@@ -27,15 +32,16 @@
 }
 
 .info {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     align-items: center;
     gap: 10px;
     text-transform: uppercase;
+    list-style: none;
 }
 
 .whatsapp::before, .telegram::before, .instagram::before, .phone::before {
-    padding-right: 10px;
+    padding-right: 15px;
     background-repeat: no-repeat;
     background-size: 20px 20px;
     display: inline-block;
@@ -60,15 +66,49 @@
     background-image: url("https://cdns.iconmonstr.com/wp-content/releases/preview/2012/240/iconmonstr-smartphone-4.png");
 }
 
-.info > ul {
-    list-style: none;
-}
-
 .menu {
     list-style: none;
 }
 
-.instagramBan {
-    font-size: smaller;
-    text-transform: none;
+// @media screen and (max-width: 1440px) {}
+
+    .footer > nav > ul {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: start;
+    gap: 0;
+    }
+    .footer > nav > ul > li {
+        display: block;
+        border: unset;
+        min-height: unset;
+        padding: 0;
+        margin: 0;
+    }
+@media screen and (max-width: 1024px) {
+        .footer {
+        grid-template-columns: auto;
+    }
+        .footer > nav > ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+        align-items: center;
+        padding: 0;
+        gap: 5px;
+    }
+    .footer > nav > ul > li {
+        display: block;
+        border: 1px solid black;
+        min-height: 40px;
+        padding: 2px 5px;
+        margin: 0;
+    }
 }
+  
+  // @media screen and (max-width: 768px) {
+  
+  // }
+  
+  // @media screen and (max-width: 425px) {
+  
+  // } */

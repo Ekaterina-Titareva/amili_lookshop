@@ -19,3 +19,10 @@
 .text {
     font-weight: 600;
 }
+
+@media screen and (max-width: 768px) {
+    .containerWrapper {
+        flex-direction: column;
+    }
+    
+}

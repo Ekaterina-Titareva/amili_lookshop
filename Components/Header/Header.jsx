@@ -25,7 +25,7 @@ function Header() {
 		</div>
 		<div className={styles.container}>
 			<div className={styles.header}>
-				<Logo/>
+				<Logo />
 			</div>
 		</div>
 	</header>

@@ -1,3 +1,4 @@
+'use client'
 import styles from './privacyPolicy.module.scss'
 
 function  PrivacyPolicy() {

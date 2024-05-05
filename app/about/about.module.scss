@@ -27,3 +27,16 @@
 .text:first-of-type{
     margin-top: 0;
 }
+
+@media screen and (max-width: 1024px) {
+    .media {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        margin: 0;
+    }
+}

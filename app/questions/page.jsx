@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import size from '../../public/assets/images/size.jpg'
 import styles from '../Questions/questions.module.scss'
@@ -179,4 +180,4 @@ function Questions() {
     );
 }
 
-export default Questions
+export default Questions;
